@@ -1,0 +1,33 @@
+@model KevinPass.Models.PcModel
+
+@{
+    ViewBag.Title = "Formulario";
+}
+<h1>CAMBIO DE DIVISA</h1>
+
+<form method="post" asp-action="Calcular">
+    <div class="form-group">
+        <label for="Numero">Ingresa la cantidad</label>
+        <input type="number" class="form-control" id="Numero" name="Numero" required />
+
+    </div>
+    <div class="form-group  mt-2">
+        <label for="PriMon">Moneda1</label>
+        <select class="form-control" id="PriMon" name="PriMon" required>
+            <option value="Dolar americano">Dolar americano</option>
+            <option value="Real brasileño">Real brasileño</option>
+            <option value="Sol Peru">Sol Peru</option>
+        </select>
+    </div>
+    <div class="form-group  mt-2"></div>
+        <label for="SecMon">Moneda2 </label>
+        <select class="form-control" id="SecMon" name="SecMon" required>
+            <option value="Dolar americano">Dolar americano</option>
+            <option value="Real brasileño">Real brasileño</option>
+            <option value="Sol Peru">Sol Peru</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Calcular</button>
+</form>
+<h1>@ViewData["Resultado"]</h1>
+
